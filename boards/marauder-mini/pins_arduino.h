@@ -60,11 +60,11 @@ static const uint8_t ADC2 = 8;
 #define GPS_SERIAL_TX SERIAL_TX
 #define GPS_SERIAL_RX SERIAL_RX
 #define HAS_BTN 1
-#define SEL_BTN 34
-#define UP_BTN 36
+#define SEL_BTN 13
+#define UP_BTN 39
 #define DW_BTN 35
-#define R_BTN 39
-#define L_BTN 13
+#define R_BTN 34
+#define L_BTN 36
 #define HAS_5_BUTTONS
 #define BTN_ALIAS "\"Ok\""
 #define BTN_ACT LOW
