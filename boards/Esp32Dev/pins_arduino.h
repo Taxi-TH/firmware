@@ -79,15 +79,11 @@ static const uint8_t G39 = 39;
 #define NRF24_MISO_PIN SPI_MISO_PIN
 
 #define FP 1
-#define FM 1
-#define FG 2
+#define FM 2
+#define FG 3
 
-#define HAS_SCREEN 1
-#define ROTATION 0
-#define MINBRIGHT 160
 #define USER_SETUP_LOADED 1
 #define ST7789_DRIVER 1
-#define TFT_RGB_ORDER 1
 #define TFT_WIDTH 172
 #define TFT_HEIGHT 320
 #define TFT_MOSI 23
@@ -96,14 +92,18 @@ static const uint8_t G39 = 39;
 #define TFT_DC   2
 #define TFT_RST  4
 #define TFT_BL   32 
-#define TFT_BACKLIGHT_ON 1
-#define TOUCH_CS -1 
-
+#define TFT_BACKLIGHT_ON HIGH // HIGH or LOW are options
+#define SMOOTH_FONT 1
+#define SPI_FREQUENCY 40000000     // Maximum for ILI9341
+#define SPI_READ_FREQUENCY 6000000 // 6 MHz is the maximum SPI read speed for the ST7789V
 
 #define SDCARD_CS 5
 #define SDCARD_SCK 18
 #define SDCARD_MISO 19
 #define SDCARD_MOSI 23
 
+#define HAS_SCREEN
+#define ROTATION 3
+#define MINBRIGHT
 
 #endif /* Pins_Arduino_h */
