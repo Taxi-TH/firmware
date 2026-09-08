@@ -63,8 +63,8 @@ static const uint8_t G39 = 39;
 #define SPI_MOSI_PIN 23
 #define SPI_SS_PIN 5
 
-#define IR_TX_PIN 22
-#define IR_RX_PIN 27
+#define IR_TX_PIN 17
+#define IR_RX_PIN 12
 
 #define CC1101_GDO0_PIN 22
 #define CC1101_SS_PIN 27
@@ -73,7 +73,7 @@ static const uint8_t G39 = 39;
 #define CC1101_MISO_PIN SPI_MISO_PIN
 
 #define NRF24_CE_PIN 16
-#define NRF24_SS_PIN 17
+#define NRF24_SS_PIN 4
 #define NRF24_MOSI_PIN SPI_MOSI_PIN
 #define NRF24_SCK_PIN SPI_SCK_PIN
 #define NRF24_MISO_PIN SPI_MISO_PIN
@@ -90,7 +90,7 @@ static const uint8_t G39 = 39;
 #define TFT_SCLK 18
 #define TFT_CS   15
 #define TFT_DC   2
-#define TFT_RST  4
+#define TFT_RST  -1
 #define TFT_BL   32 
 #define TFT_BACKLIGHT_ON HIGH // HIGH or LOW are options
 #define SMOOTH_FONT 1
@@ -103,7 +103,7 @@ static const uint8_t G39 = 39;
 #define SDCARD_MOSI 23
 
 #define HAS_SCREEN
-#define ROTATION 3
+#define ROTATION 1
 #define MINBRIGHT
 
 #endif /* Pins_Arduino_h */
