@@ -65,8 +65,8 @@ static const uint8_t G39 = 39;
 
 #define IR_TX_PINS '{{"IR TX", 13}}'
 #define IR_RX_PINS '{{"IR RX", 14}}'
-#define IR_TX_PIN 13
-#define IR_RX_PIN 14
+#define IR_TX_PIN 22
+#define IR_RX_PIN 27
 
 #define CC1101_GDO0_PIN 22
 #define CC1101_SS_PIN 27
@@ -101,16 +101,11 @@ static const uint8_t G39 = 39;
 #define TFT_BACKLIGHT_ON 1
 #define TOUCH_CS -1 
 
-#undef SDCARD_CS
-#define SDCARD_CS 4
+
+#define SDCARD_CS 5
 #define SDCARD_SCK 18
 #define SDCARD_MISO 19
 #define SDCARD_MOSI 23
 
-#undef GROVE_SDA
-#define GROVE_SDA 33
-
-#undef GROVE_SCL
-#define GROVE_SCL 26
 
 #endif /* Pins_Arduino_h */
