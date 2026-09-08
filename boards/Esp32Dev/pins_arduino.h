@@ -63,8 +63,6 @@ static const uint8_t G39 = 39;
 #define SPI_MOSI_PIN 23
 #define SPI_SS_PIN 5
 
-#define IR_TX_PINS '{{"IR TX", 13}}'
-#define IR_RX_PINS '{{"IR RX", 14}}'
 #define IR_TX_PIN 22
 #define IR_RX_PIN 27
 
