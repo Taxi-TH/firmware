@@ -55,11 +55,6 @@ static const uint8_t DAC2 = 26;
 #define GPS_SERIAL_TX SERIAL_TX
 #define GPS_SERIAL_RX SERIAL_RX
 
-#define RGB_LED -1
-#define TXLED -1
-#define LED_ON HIGH
-#define LED_OFF LOW
-
 // ==========================================
 // 3. BUTTONS CONFIGURATION (5 BUTTONS)
 // ==========================================
