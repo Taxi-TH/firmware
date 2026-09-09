@@ -10,12 +10,12 @@
 static const uint8_t TX = 1;
 static const uint8_t RX = 3;
 
+// ประกาศ GROVE PINS ก่อนเรียกใช้
+#define GROVE_SDA 27
+#define GROVE_SCL 22
 
 static const uint8_t SDA = GROVE_SDA;
 static const uint8_t SCL = GROVE_SCL;
-
-#define GROVE_SDA 27
-#define GROVE_SCL 22
 
 // Main SPI Bus (Shared: TFT, SD, NRF24, CC1101)
 #define SPI_SCK_PIN 18
@@ -48,8 +48,8 @@ static const uint8_t DAC2 = 26;
 // ==========================================
 // 2. SERIAL / BADUART CONFIGURATION
 // ==========================================
-#define BAD_TX=GROVE_SDA
-#define BAD_RX=GROVE_SCL
+#define BAD_TX GROVE_SDA
+#define BAD_RX GROVE_SCL
 #define SERIAL_TX 3
 #define SERIAL_RX 1
 #define GPS_SERIAL_TX SERIAL_TX
@@ -61,7 +61,7 @@ static const uint8_t DAC2 = 26;
 #define LED_OFF LOW
 
 // ==========================================
-// 3. BUTTONS CONFIGURATION (YOUR 5 BUTTONS)
+// 3. BUTTONS CONFIGURATION (5 BUTTONS)
 // ==========================================
 #define HAS_BTN 1
 #define HAS_5_BUTTONS 1
@@ -73,11 +73,6 @@ static const uint8_t DAC2 = 26;
 #define BTN_ALIAS "\"Ok\""
 #define BTN_ACT LOW
 
-// ==========================================
-// 4. INFRARED (IR) PINS
-// ==========================================
-#define IR_TX_PIN '{{"Pin 22", 22}, {"Pin 27", 27}}'
-#define IR_RX_PIN '{{"Pin 22", 22}, {"Pin 27", 27}}'
 
 // ==========================================
 // 5. SUB-GHZ CC1101 (FIXED TO PIN 22 & 27)
@@ -106,26 +101,25 @@ static const uint8_t DAC2 = 26;
 // ==========================================
 // 7. TFT ST7789 1.47" DISPLAY (172x320)
 // ==========================================
-#define USER_SETUP_LOADED 
-#define ST7789_DRIVER 
+#define USER_SETUP_LOADED 1
+#define ST7789_DRIVER 1
 #define CGRAM_OFFSET
 #define TFT_WIDTH 172
 #define TFT_HEIGHT 320
-#define TFT_MOSI SPI_MOSI_PIN           // 23
-#define TFT_SCLK SPI_SCK_PIN           // 18
+#define TFT_MOSI SPI_MOSI_PIN
+#define TFT_SCLK SPI_SCK_PIN
 #define TFT_CS 15
 #define TFT_DC 2
 #define TFT_RST -1
-#define TFT_BL 32                     //  Display backlight control pin
-#define TFT_BACKLIGHT_ON HIGH 
+#define TFT_BL 32
+#define TFT_BACKLIGHT_ON HIGH
 #define SMOOTH_FONT 1
 #define SPI_FREQUENCY 40000000
 #define SPI_READ_FREQUENCY 6000000
 
-#define HAS_SCREEN
+#define HAS_SCREEN 1
 #define ROTATION 3
 #define MINBRIGHT (uint8_t)1
-
 
 // ==========================================
 // 8. SD CARD CONFIGURATION (SPI SHARED)
