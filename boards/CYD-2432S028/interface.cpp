@@ -75,10 +75,10 @@ void _setup_gpio() {
 #endif
 
     bruceConfigPins.badusb_bus = {(gpio_num_t)22, (gpio_num_t)27}; // rx, tx (CH9329)
-    bruceConfigPins.irTx = 22;
-    bruceConfigPins.irRx = 27;
-    bruceConfigPins.rfTx = 27;
-    bruceConfigPins.rfRx = 22;
+    bruceConfigPins.irTx = 17;
+    bruceConfigPins.irRx = 35;
+    bruceConfigPins.rfTx = 22;
+    bruceConfigPins.rfRx = 27;
     bruceConfigPins.SDCARD_bus = {
         (gpio_num_t)18, (gpio_num_t)19, (gpio_num_t)23, (gpio_num_t)5
     }; // sck,miso,mosi,cs
@@ -107,7 +107,7 @@ void _setup_gpio() {
         (gpio_num_t)18, (gpio_num_t)19, (gpio_num_t)23, (gpio_num_t)27, (gpio_num_t)22, GPIO_NUM_NC
     }; // sck,miso,mosi,cs,gdo0,gdo2
     bruceConfigPins.NRF24_bus = {
-        (gpio_num_t)18, (gpio_num_t)19, (gpio_num_t)23, (gpio_num_t)27, (gpio_num_t)22
+        (gpio_num_t)18, (gpio_num_t)19, (gpio_num_t)23, (gpio_num_t)4, (gpio_num_t)16
     }; // sck,miso,mosi,cs(ss),ce
 #if !defined(LITE_VERSION)
     bruceConfigPins.W5500_bus = {
@@ -168,8 +168,8 @@ void _post_setup_gpio() {
     bruceConfig.colorInverted = 0;
     tft.invertDisplay(0);
 #else
-    bruceConfig.colorInverted = 1;
-    tft.invertDisplay(1);
+    bruceConfig.colorInverted = 0;
+    tft.invertDisplay(0);
 #endif
 
     bruceConfigPins.gpsBaudrate = 9600;
@@ -183,12 +183,12 @@ void _post_setup_gpio() {
         bruceConfigPins.rfRx = 27;
         pinsChanged = true;
     }
-    if (bruceConfigPins.irTx != 22) {
-        bruceConfigPins.irTx = 22;
+    if (bruceConfigPins.irTx != 17) {
+        bruceConfigPins.irTx = 17;
         pinsChanged = true;
     }
-    if (bruceConfigPins.irRx != 27) {
-        bruceConfigPins.irRx = 27;
+    if (bruceConfigPins.irRx != 35) {
+        bruceConfigPins.irRx = 35;
         pinsChanged = true;
     }
     if (pinsChanged) bruceConfigPins.saveFile();
