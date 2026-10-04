@@ -11,7 +11,7 @@ on:
       environment:
         description: 'Select environment to build'
         required: true
-        default: 'lilygo-t-embed-cc1101'
+        default: 'CYD-2432S028'
         type: choice
         options:
           - "arduino-nesso-n1"
