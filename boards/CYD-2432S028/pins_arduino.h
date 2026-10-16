@@ -51,7 +51,7 @@ static const uint8_t DAC2 = 26;
 
 // InfraRed
 #define RXLED 27
-#define TXLED 22
+#define TXLED 17
 
 // Deepsleep
 #define DEEPSLEEP_WAKEUP_PIN 36 // Touch interrupt
