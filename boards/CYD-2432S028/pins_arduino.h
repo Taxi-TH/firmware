@@ -46,7 +46,7 @@ static const uint8_t DAC1 = 25;
 static const uint8_t DAC2 = 26;
 
 // I2C
-#define GROVE_SDA 27
+#define GROVE_SDA 35
 #define GROVE_SCL 22
 
 // InfraRed
